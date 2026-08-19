@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>proyecto1</title>
+	<style>
+
+    <style> 
+    .gif-barra {
+    margin-left: auto;
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gif-barra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c241f;
+            color: #f2f2e8;      
+        }
+
+
+        .pagina {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #202820;
+        }
+
+
+        .encabezado {
+            background-color: #a8c66c;
+            min-height: 125px;
+            display: flex;
+            align-items: center;
+            padding: 20px 35px;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #172019;
+            letter-spacing: -3px;
+        }
+
+        .titulo {
+            border-left: 2px solid #172019;
+            padding-left: 25px;
+        }
+
+        .titulo h1 {
+            margin: 0;
+            font-size: 27px;
+            color: #172019;
+        }
+
+        .titulo p {
+            margin: 5px 0;
+            color: #283329;
+        }
+       
+
+
+        .contenido {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+
+        .columna-izquierda {
+            width: 52%;
+        }
+
+      
+
+        .perfil {
+            background-color: #9aaa7c;
+            padding: 20px;
+            border-radius: 25px;
+            border: 2px solid #151b16;
+            margin-bottom: 20px;
+        }
+
+        .perfil h2 {
+            margin-top: 0;
+            color: #172019;
+            background-color: #d8e5b8;
+            padding: 8px;
+            border-radius: 10px;
+            font-size: 21px;
+        }
+
+        .perfil-contenido {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .foto-billie {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border: 5px solid #d8e5b8;
+            border-radius: 8px;
+        }
+
+        .datos {
+            color: #ffffff;
+        }
+
+        .datos h3 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .datos p {
+            line-height: 1.5;
+        }
+
+
+        .facts {
+            background-color: #9aaa7c;
+            padding: 20px;
+            border-radius: 25px;
+            border: 2px solid #151b16;
+        }
+
+        .titulo-caja {
+            background-color: #d8e5b8;
+            color: #172019;
+            padding: 8px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .facts p {
+            line-height: 1.5;
+            color: #ffffff;
+        }
+
+
+        .columna-derecha {
+            width: 48%;
+        }
+
+        .caja-derecha {
+            background-color: #9aaa7c;
+            border: 2px solid #151b16;
+            border-radius: 25px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .caja-derecha h3 {
+            background-color: #d8e5b8;
+            color: #172019;
+            padding: 9px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .caja-derecha p {
+            line-height: 1.5;
+        }
+
+      
+        .albums {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .album {
+            background-color: #e7dfc8;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .album img {
+            width: 100%;
+            height: 145px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .album p {
+            margin: 7px 0 2px;
+            color: #172019;
+            font-weight: bold;
+        }
+
+
+        .playlist {
+            background-color: #9aaa7c;
+            padding: 20px;
+            border-radius: 25px;
+            border: 2px solid #151b16;
+        }
+
+        .cancion {
+            background-color: #d8e5b8;
+            color: #172019;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+
+
+
+        footer {
+            background-color: #a8c66c;
+            color: #172019;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+
+        @media (max-width: 800px) {
+
+            .contenido {
+                flex-direction: column;
+            }
+
+            .columna-izquierda,
+            .columna-derecha {
+                width: 100%;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .encabezado {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .titulo {
+                border-left: none;
+                border-top: 2px solid #172019;
+                padding-left: 0;
+                padding-top: 10px;
+            }
+
+            .perfil-contenido {
+                flex-direction: column;
+            }
+        }
+        .caja{
+        	background-image: url(w.jpg);
+        	width:5000px;
+        	height: 2000px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <header class="encabezado">
+
+            <div class="logo">
+                BILLIE
+            </div>
+
+            <div class="titulo">
+                <h1>BILLIE EILISH</h1>
+                <p>GOLDEN FAN PAGE</p>
+                <p>Everything about the artist and her music.</p>
+            </div>
+            <div class="gif-barra">
+        <img src="GEL.gif" alt="Billie Eilish GIF">
+    </div>
+
+        </header>
+
+
+      
+
+
+        <main class="contenido">
+
+
+          
+            <section class="columna-izquierda">
+
+
+                <div class="perfil">
+
+                    <h2>BILLIE EILISH</h2>
+
+                    <div class="perfil-contenido">
+
+                        <img 
+                            src="billie.jpg" 
+                            alt="illie.jpg"
+                            class="foto.jpg"
+                        >
+
+                        <div class="datos">
+
+                            <h3>THE ARTIST</h3>
+
+                            <p>
+                                Billie Eilish is an American singer and
+                                songwriter known for her unique music,
+                                visual style and artistic identity.
+                            </p>
+
+                            <p>
+                                <strong>GENRE:</strong> Pop / Alternative
+                            </p>
+
+                            <p>
+                                <strong>ROLE:</strong> Singer & Songwriter
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            
+                <div class="facts">
+
+                    <div class="titulo-caja">
+                        FACTS ABOUT BILLIE
+                    </div>
+
+                    <p>
+                        Billie Eilish became known for her distinctive
+                        voice, alternative pop sound and creative music
+                        videos.
+                    </p>
+
+                    <p>
+                        Her music often explores emotions, personal
+                        experiences and different aspects of life.
+                    </p>
+
+                    <p>
+                        She is also recognized for her creative fashion,
+                        visual concepts and collaborations with her
+                        brother FINNEAS.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+         
+            <section class="columna-derecha">
+
+
+                <div class="caja-derecha">
+
+                    <h3>WELCOME TO MY BILLIE AREA</h3>
+
+                    <p>
+                        This is my personal fan space dedicated to
+                        Billie Eilish.
+                    </p>
+
+                    <p>
+                        Here you can discover albums, songs, facts,
+                        photographs and some of my favorite Billie
+                        Eilish moments.
+                    </p>
+
+
+                </div>
+
+
+                <div class="caja-derecha">
+
+                    <h3>MY FAVORITE ALBUMS</h3>
+
+                    <div class="albums">
+
+                        <div class="album">
+
+                            <img src="illie.jpg"
+                                 alt="Don't Smile at Me">
+
+                            <p>Don't Smile at Me</p>
+
+                        </div>
+
+
+                        <div class="album">
+
+                            <img src="foto.jpg"
+                                 alt="When We All Fall Asleep">
+
+                            <p>When We All Fall Asleep</p>
+
+                        </div>
+
+
+                        <div class="album">
+
+                            <img src="R.jpg"
+                                 alt="Happier Than Ever">
+
+                            <p>Happier Than Ever</p>
+
+                        </div>
+
+
+                        <div class="album">
+
+                            <img src="E.jpg"
+                                 alt="Hit Me Hard and Soft">
+
+                            <p>Hit Me Hard and Soft</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            
+                <div class="playlist">
+
+                    <div class="titulo-caja">
+                        MY BILLIE PLAYLIST
+                    </div>
+
+                    <div class="cancion">
+                        ♫ BIRDS OF A FEATHER
+                    </div>
+
+                    <div class="cancion">
+                        ♫ WILDFLOWER
+                    </div>
+
+                    <div class="cancion">
+                        ♫ OCEAN EYES
+                    </div>
+
+                    <div class="cancion">
+                        ♫ LOVELY
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            BILLIE EILISH FAN PAGE • CREATED WITH HTML & CSS INTERNO 
+            CREADORA:JANETH ASENCIO 3 INFO-A
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
